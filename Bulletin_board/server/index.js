@@ -17,26 +17,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(bodyParser.json());
 
-// app.post("/api/insert", (req, res) => {
-//   const hotSpringName = req.body.hotSpringName;
-//   const hotspringReview = req.body.hotspringReview;
-
-//   const sqlInsert =
-//     "INSERT INTO hotspring_table (hotSpringName, hotspringReview) VALUES (?,?)";
-//   db.query(sqlInsert, [hotSpringName, hotspringReview], (err, result) => {
-//     console.log(result);
-//   });
-// });
-
-// app.post("/api/insert", (req, res) => {
-//   const sqlInsert =
-//     "INSERT INTO hotspring_table (hotSpringName, hotspringReview) VALUES('武川の湯','最高');";
-//   db.query(sqlInsert, (err, result) => {
-//     res.send("hello");
-//     console.log(err);
-//   });
-// });
-
 //Ok!
 // app.get("/", (req, res) => {
 //   const sqlInsert =
@@ -47,13 +27,19 @@ app.use(bodyParser.json());
 //   });
 // });
 
+app.get("/api/get", (req, res) => {
+  const sqlGet = "SELECT * FROM hotspring_table";
+  db.query(sqlGet, (err, result) => {
+    res.send(result);
+  });
+});
+
 app.post("/api/insert", (req, res) => {
   const hotSpringName = req.body.hotSpringName;
-  const hotspringReviews = req.body.hotspringReviews;
+  const hotSpringReviews = req.body.hotSpringReviews;
   const sqlInsert =
-    "INSERT INTO hotspring_table (hotSpringName, hotSpringReviews) VALUES (?, ?);";
-  db.query(sqlInsert, (err, result) => {
-    res.send("hello");
+    "INSERT INTO hotspring_table (hotSpringName, hotSpringReviews) VALUES (?,?)";
+  db.query(sqlInsert, [hotSpringName, hotSpringReviews], (err, result) => {
     console.log(err);
   });
 });
