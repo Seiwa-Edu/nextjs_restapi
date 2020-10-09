@@ -44,6 +44,15 @@ app.post("/api/insert", (req, res) => {
   });
 });
 
+app.delete("/api/delete", (req, res) => {
+  const name = req.body.hotSpringName;
+
+  const sqlDelete = "DELETE FROM hotspring_table WHERE = ?";
+  db.query(sqlDelete, name, (req, result) => {
+    console.log(req);
+  });
+});
+
 app.listen(3001, () => {
   console.log("running on port 3001");
 });
