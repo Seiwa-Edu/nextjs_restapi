@@ -14,7 +14,6 @@ const db = mysql.createPool({
 app.use(cors());
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-
 app.use(bodyParser.json());
 
 //Ok!
@@ -44,12 +43,21 @@ app.post("/api/insert", (req, res) => {
   });
 });
 
-app.delete("/api/delete", (req, res) => {
-  const name = req.body.hotSpringName;
+app.delete("/api/delete/:hotSpringName", (req, res) => {
+  const name = req.params.hotSpringName;
+  const sqlDelete = "DELETE FROM hotspring_table WHERE hotSpringName = ?";
+  db.query(sqlDelete, name, (err, result) => {
+    if (err) console.log(err);
+  });
+});
 
-  const sqlDelete = "DELETE FROM hotspring_table WHERE = ?";
-  db.query(sqlDelete, name, (req, result) => {
-    console.log(req);
+app.put("/api/update", (req, res) => {
+  const name = req.body.hotSpringName;
+  const review = req.body.hotSpringReviews;
+  const sqlUpdate =
+    "UPDATE hotspring_table SET hotSpringReviews= ? WHERE hotSpringName = ?";
+  db.query(sqlUpdate, [review, name], (err, result) => {
+    if (err) console.log(err);
   });
 });
 
