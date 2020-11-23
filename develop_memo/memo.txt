@@ -1,0 +1,40 @@
+1週間に1つアプリ完成
+アウトプットに勝る物はない。
+
+直近では、
+Rails tutorial 半分,
+サービス開発半分で進めよう。
+
+開発スケジュール
+Mesutero: Rails tutorial を進めながら開発開始
+Suita: 飯テロが終わり次第開発開始。
+
+
+
+・バイトプラス [Stadio]
+11月30日　目標
+
+・Rails Tutorial 継続。
+
+ちょい進めたい。
+・チャットAR [Unity/C#] 個人 30h?
+
+
+=============================
+
+開発する項目箇条書き
+・肌変化管理システム [React Native]　個人 40h?
+・チャットAR [Unity/C#] 個人 40h
+・Google Maps API 空いているお店の検索　[React/Node.js]
+・WEB系サービス?? [Rails]　個人 40h?
+・Unity 開発　[Unity/C#] Cicada
+・Unity コロナバスターズ 改良盤 [Unity/C#] 10h 程度
+・旅行プラン共有サービス [Rails] 個人　80h
+・バイトプラス [Studio]  40?
+・バイトプラス [Rails] 100h?
+・展示アンケート専用app [Unity C#]
+.飯テロ [Rails] 個人　40h 
+
+
+・SeiwaBlog　　[React Gatsby] 個人 40h?
+※むしろ最後のサービスかもしれない。
