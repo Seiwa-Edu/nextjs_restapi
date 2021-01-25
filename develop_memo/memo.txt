@@ -34,6 +34,10 @@ Suita: 飯テロが終わり次第開発開始。
 ・肌変化管理システム [React Native]　個人 40h?
 ・チャットAR [Unity/C#] 個人 40h
 ・Google Maps API 空いているお店の検索　[React/Node.js]
+またはSwift:
+・Hoge World [Rails]
+エンジニア初学者向けサービス
+サロンに参加しないとチームが作れないという課題。
 ・WEB系サービス?? [Rails]　個人 40h?
 ・Unity 開発　[Unity/C#] Cicada
 ・Unity コロナバスターズ 改良盤 [Unity/C#] 10h 程度
